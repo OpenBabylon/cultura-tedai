@@ -1,3 +1,4 @@
 [submodule "vectara/vectara-ingest"]
 	path = vectara/vectara-ingest
 	url = git@github.com:vectara/vectara-ingest.git
+	shallow = true
