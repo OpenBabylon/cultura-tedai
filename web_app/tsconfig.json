@@ -1,0 +1,26 @@
+{
+	"files": [],
+	"references": [
+		{
+			"path": "./apps/frontend/tsconfig.json"
+		},
+		{
+			"path": "./apps/api-server/tsconfig.json"
+		},
+		{
+			"path": "./packages/shared/tsconfig.json"
+		},
+		{
+			"path": "./packages/constants/tsconfig.json"
+		},
+		{
+			"path": "./packages/graceful-shutdown/tsconfig.json"
+		},
+		{
+			"path": "./packages/http-client/tsconfig.json"
+		},
+		{
+			"path": "./packages/types/tsconfig.json"
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"extends": "@cultura-ai/tsconfig/tsconfig.node.json",
+	"include": ["src/**/*"],
+	"compilerOptions": {
+		"composite": true,
+		"baseUrl": ".",
+		"tsBuildInfoFile": "./tsconfig.node.tsbuildinfo",
+		"rootDir": "./src",
+		"outDir": "./dist",
+	},
+	"references": [{ "path": "../shared/tsconfig.json" }]
+}

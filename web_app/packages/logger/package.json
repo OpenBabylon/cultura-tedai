@@ -1,0 +1,34 @@
+{
+	"name": "@cultura-ai/logger",
+	"version": "1.0.0",
+	"description": "",
+	"author": "Andrew L.",
+	"license": "ISC",
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"scripts": {
+		"build": "pnpm clean && pnpm compile",
+		"pkg:build": "pnpm build",
+		"clean": "npx rimraf ./dist && npx rimraf ./tsconfig.node.tsbuildinfo",
+		"compile": "tsc"
+	},
+	"files": [
+		"dist/**"
+	],
+	"dependencies": {
+		"@cultura-ai/shared": "workspace:*",
+		"pino": "^9.4.0",
+		"pino-pretty": "^11.2.2"
+	},
+	"devDependencies": {
+		"@cultura-ai/eslint-config": "workspace:*",
+		"@cultura-ai/types": "workspace:*",
+		"@cultura-ai/node-inject": "workspace:*",
+		"@cultura-ai/tsconfig": "workspace:*"
+	}
+}

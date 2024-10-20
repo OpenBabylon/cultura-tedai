@@ -1,0 +1,25 @@
+{
+	"name": "@cultura-ai/http-client",
+	"version": "1.0.0",
+	"private": true,
+	"author": "Andrew L. (andrew.io.dev@gmail.com)",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "pnpm clean && pnpm compile",
+		"pkg:build": "pnpm build",
+		"clean": "npx rimraf ./dist && npx rimraf ./tsconfig.node.tsbuildinfo",
+		"compile": "tsc"
+	},
+	"dependencies": {
+		"@cultura-ai/shared": "workspace:*"
+	},
+	"devDependencies": {
+		"@cultura-ai/types": "workspace:*",
+		"@cultura-ai/tsconfig": "workspace:*"
+	}
+}

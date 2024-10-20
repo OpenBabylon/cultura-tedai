@@ -1,0 +1,16 @@
+{
+	"name": "@cultura-ai/theme-preset",
+	"version": "1.0.0",
+	"private": true,
+	"author": "Andrew L. (andrew.io.dev@gmail.com)",
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./lib/index.js",
+			"types": "./index.d.ts"
+		}
+	},
+	"files": [
+		"lib"
+	]
+}

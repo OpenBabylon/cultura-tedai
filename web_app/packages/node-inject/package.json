@@ -1,0 +1,26 @@
+{
+	"name": "@cultura-ai/node-inject",
+	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"scripts": {
+		"build": "pnpm run clean && pnpm run compile",
+		"clean": "rm -rf ./dist & rm -f tsconfig.tsbuildinfo",
+		"compile": "tsc -p tsconfig.json",
+		"prepublishOnly": "pnpm run build"
+	},
+	"dependencies": {
+		"@cultura-ai/shared": "workspace:*"
+	},
+	"devDependencies": {
+		"@cultura-ai/types": "workspace:*",
+		"@cultura-ai/tsconfig": "workspace:*",
+		"@cultura-ai/eslint-config": "workspace:*"
+	}
+}
