@@ -1,0 +1,28 @@
+{
+	"name": "@cultura-ai/service-actor",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Service Actor",
+	"author": "Andrew L.",
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"scripts": {
+		"build": "pnpm run clean && pnpm run compile",
+		"clean": "rm -rf ./dist & rm -f tsconfig.tsbuildinfo",
+		"compile": "tsc -p tsconfig.json",
+		"prepublishOnly": "pnpm run build"
+	},
+	"dependencies": {
+		"@cultura-ai/shared": "workspace:*",
+		"@cultura-ai/node-inject": "workspace:*"
+	},
+	"devDependencies": {
+		"@cultura-ai/tsconfig": "workspace:*",
+		"@cultura-ai/eslint-config": "workspace:*"
+	}
+}

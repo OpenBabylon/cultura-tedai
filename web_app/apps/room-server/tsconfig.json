@@ -1,0 +1,14 @@
+{
+	"extends": "@cultura-ai/tsconfig/tsconfig.node.json",
+	"include": ["env.d.ts", "ioc.d.ts", "src/**/*"],
+	"compilerOptions": {
+		"composite": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"tsBuildInfoFile": "./tsconfig.node.tsbuildinfo",
+		"rootDir": "./src",
+		"outDir": "./dist"
+	}
+}

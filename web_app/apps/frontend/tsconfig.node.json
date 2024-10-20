@@ -1,0 +1,11 @@
+{
+	"extends": "@cultura-ai/tsconfig/tsconfig.node.json",
+	"include": [
+		"vite.config.*"
+	],
+	"compilerOptions": {
+		"composite": true,
+		"noEmit": true,
+		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+	}
+}

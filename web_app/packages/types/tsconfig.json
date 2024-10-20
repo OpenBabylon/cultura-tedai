@@ -1,0 +1,15 @@
+{
+	"include": ["src/**/*"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"rootDir": ".",
+		"composite": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"allowJs": false,
+		"outDir": "../dist/out-tsc"
+	}
+}

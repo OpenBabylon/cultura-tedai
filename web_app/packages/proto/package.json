@@ -1,0 +1,29 @@
+{
+	"name": "@cultura-ai/proto",
+	"version": "1.0.0",
+	"private": true,
+	"author": "Andrew L. (andrew.io.dev@gmail.com)",
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "pnpm clean && pnpm compile",
+		"pkg:build": "pnpm build",
+		"clean": "npx rimraf ./dist && npx rimraf ./tsconfig.node.tsbuildinfo",
+		"compile": "tsc"
+	},
+	"dependencies": {
+		"@cultura-ai/shared": "workspace:*"
+	},
+	"devDependencies": {
+		"@cultura-ai/tsconfig": "workspace:*",
+		"@cultura-ai/types": "workspace:*"
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"private": true,
+	"name": "@cultura-ai/tsconfig",
+	"version": "1.0.0",
+	"files": [
+		"tsconfig.node.json",
+		"tsconfig.vue.json"
+	],
+	"type": "module",
+	"author": "Andrew L. (andrew.io.dev@gmail.com)",
+	"dependencies": {
+		"@vue/tsconfig": "^0.5.1",
+		"@types/node": "^20.14.5",
+		"@tsconfig/node22": "^22.0.0"
+	}
+}

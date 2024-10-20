@@ -1,0 +1,23 @@
+{
+	"name": "@cultura-ai/constants",
+	"version": "1.0.0",
+	"private": true,
+	"author": "Andrew L. (andrew.io.dev@gmail.com)",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "pnpm clean && pnpm compile",
+		"pkg:build": "pnpm build",
+		"clean": "npx rimraf ./dist && npx rimraf ./tsconfig.node.tsbuildinfo",
+		"compile": "tsc"
+	},
+	"devDependencies": {
+		"@cultura-ai/tsconfig": "workspace:*",
+		"@cultura-ai/types": "workspace:*",
+		"@types/lodash": "^4.17.7"
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"author": "Andrew L. (andrew.io.dev@gmail.com)",
+	"scripts": {
+		"dev:api-server": "pnpm --filter @cultura-ai/api-server dev",
+		"dev:frontend": "pnpm --filter @cultura-ai/frontend dev",
+		"dev:room-server": "pnpm --filter @cultura-ai/room-server dev",
+		"dev:agent-stt": "pnpm --filter @cultura-ai/agent-stt dev",
+		"clean": "pnpm -r --ignore-workspace-root-check clean",
+		"clean:node_modules": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' +",
+		"pkg:build": "pnpm -r --ignore-workspace-root-check pkg:build",
+		"postinstall": "pnpm -r --ignore-workspace-root-check pkg:build",
+		"heroku-postbuild": "pnpm build --filter \"$APP_PACKAGE_NAME\""
+	},
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"engines": {
+		"node": "22.6.0",
+		"pnpm": ">=9.5.0"
+	},
+	"devDependencies": {
+		"rimraf": "^6.0.1",
+		"typescript": "~5.6.2",
+		"eslint": "^8.57.0",
+		"prettier": "^3.3.3",
+		"@trivago/prettier-plugin-sort-imports": "^4.3.0"
+	},
+	"packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228"
+}

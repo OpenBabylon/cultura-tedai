@@ -1,0 +1,37 @@
+{
+	"name": "@cultura-ai/agent-stt",
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"build": "pnpm clean && pnpm compile",
+		"clean": "npx rimraf ./dist && npx rimraf ./tsconfig.node.tsbuildinfo",
+		"compile": "tsc && tsc-alias -p tsconfig.json",
+		"start": "node ./dist/main.js start",
+		"dev": "NODE_ENV=development pnpm exec tsx watch --env-file .env --import @swc-node/register/esm-register ./src/main.ts dev --log-level debug",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Andrew L. (andrew.io.dev@gmail.com)",
+	"devDependencies": {
+		"@cultura-ai/eslint-config": "workspace:*",
+		"@cultura-ai/ioc": "workspace:*",
+		"@cultura-ai/logger": "workspace:*",
+		"@cultura-ai/tsconfig": "workspace:*",
+		"@cultura-ai/types": "workspace:*",
+		"@cultura-ai/uws": "workspace:*",
+		"@swc-node/register": "^1.9.0",
+		"@types/node": "^20.14.5",
+		"tsc-alias": "^1.8.10",
+		"tsx": "^4.19.1"
+	},
+	"dependencies": {
+		"@cultura-ai/graceful-shutdown": "workspace:*",
+		"@cultura-ai/http-client": "workspace:*",
+		"@cultura-ai/proto": "workspace:*",
+		"@cultura-ai/shared": "workspace:*",
+		"@livekit/agents": "^0.3.3",
+		"@livekit/rtc-node": "0.9.0",
+		"@livekit/agents-plugin-openai": "^0.3.3",
+		"livekit-server-sdk": "^2.7.2",
+		"groq-sdk": "^0.7.0"
+	}
+}
